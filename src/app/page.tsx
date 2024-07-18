@@ -1,5 +1,4 @@
 import Image from "next/image";
-import MainMenu from "../components/mainMenu";
 import ContentMenu from "../components/ContentMenu";
 import Trailer from "../components/Trailer";
 import Link from "next/link";
