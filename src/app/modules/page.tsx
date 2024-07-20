@@ -38,7 +38,7 @@ export default function Page() {
             <div className="mb-2 border-4 grid grid-cols-7 gap-4 justify-items-center no-scrollbar overflow-y-auto w-[62vw] h-[10vh]">
 
             </div>
-            <div className="p-4  border-4 grid grid-cols-7 gap-4 justify-items-center no-scrollbar overflow-y-auto h-[70vh]">
+            <div className="p-10 grid grid-cols-6 gap-4 justify-items-center no-scrollbar overflow-y-auto ">
                 {modules.map(module => (
                     <ModuleButton
                         module={module} />
@@ -59,6 +59,10 @@ function ModuleButton({ module }: { module: moduleInfo }) {
             key={module.module_id}
             style={{ width: '150px', height: '150px' }}
         >
+            <div className="border flex rounded">
+                <p>test</p>
+                <p className="pl-2">1</p>
+            </div>
             <Image
                 src={module.image_url}
                 alt={module.module_name}

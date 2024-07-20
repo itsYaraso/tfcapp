@@ -74,6 +74,9 @@ export default function Home() {
             />
           </a>
         </div>
+        <div className="absolute bottom-0 right-0 mr-3">
+          <p>The First Companion is not affiliated with or endorsed by NEXON Games Co., Ltd.</p>
+        </div>
       </div>
     </main>
   );

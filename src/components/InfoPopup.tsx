@@ -1,9 +1,3 @@
-type infobox = {
-    description: string
-    name: string
-
-}
-
 export default function InfoPopup () {
     <div>
         <div data-popover id="popover-click" role="tooltip" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
