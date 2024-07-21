@@ -29,3 +29,5 @@ export async function getModules(): Promise<moduleInfo[]> {
     const data = await response.json()
     return data as moduleInfo[]
 }
+
+
