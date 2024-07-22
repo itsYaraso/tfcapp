@@ -35,10 +35,10 @@ export default function Page() {
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-start p-24">
-            <div className="w-full flex justify-between items-start">
+            <div>
                 <Link href="/">
                     <Image
-                        className="mt-6"
+                        className="mt-6 absolute top-0"
                         src="/tfclogo.svg"
                         alt="tfc logo"
                         width={35}
@@ -46,16 +46,16 @@ export default function Page() {
                         priority
                     />
                 </Link>
-                <div className="ml-3 mt-3">
-                    <ContentMenu />
-                </div>
+                <div className="absolute top-0 left-0 ml-3 mt-3">
+                <ContentMenu />
+            </div>
             </div>
             <div className="p-10 grid grid-cols-6 gap-4 justify-items-center no-scrollbar overflow-y-auto h-[100vh] w-[68vw]">
                 {descendants.map(descendant => (
                     <DescendantButton
                         key={descendant.descendant_id}
                         descendant={descendant}
-                        onClick={showPopup}
+                        onClick={() => showPopup(descendant)}
                     />
                 ))}
             </div>
@@ -77,7 +77,7 @@ function Popup({ descendant, onClose }: { descendant: DescendantInfo, onClose: (
         setCurrentLevel(prevLevel => Math.max(prevLevel - 1, 1))
     }
 
-    const currentStat = descendant.descendant_stat.find(stat => stat.level === currentLevel)
+    const currentStats = descendant.descendant_stat.find(stat => stat.level === currentLevel)?.stat_detail || []
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -93,11 +93,15 @@ function Popup({ descendant, onClose }: { descendant: DescendantInfo, onClose: (
                 />
 
                 <div className="mt-4">
-                    <h3 className="text-lg font-bold">Module Stats</h3>
-                    {currentStat && (
-                        <div className="align-text-center">
-                            <p>Level: {currentStat.level}</p>
-                        </div>
+                    <h3 className="text-lg font-bold">{descendant.descendant_name}s Stats</h3>
+                    {currentStats.length > 0 ? (
+                        currentStats.map((stat, index) => (
+                            <div key={index} className="align-text-center">
+                                <p>{stat.stat_type}: {stat.stat_value}</p>
+                            </div>
+                        ))
+                    ) : (
+                        <p>No stats available for this level.</p>
                     )}
                 </div>
                 <div className="mt-4 flex space-x-2 relative">

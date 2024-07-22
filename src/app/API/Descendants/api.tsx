@@ -7,23 +7,22 @@ export type descendant_skill = {
     skill_description: string;
 };
 
-export type descendant_stat = {
-    level: number;
-
-};
-
-export type descendant_stat_detail = {
+export type stat_detail = {
     stat_type: string;
     stat_value: number;
 };
+
+export type descendant_stat = {
+    level: number;
+    stat_detail: stat_detail[];
+};
+
 export type DescendantInfo = {
     descendant_id: string;
     descendant_name: string;
     descendant_image_url: string;
     descendant_skill: Array<descendant_skill>;
     descendant_stat: Array<descendant_stat>;
-    stat_detail: Array<descendant_stat_detail>;
-
 };
 
 export async function getDescendant(): Promise<DescendantInfo[]> {
