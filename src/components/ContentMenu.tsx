@@ -12,7 +12,8 @@ export default function ContentMenu() {
                 <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                 <ul className="menu bg-neutral-950 text-base-content min-h-full w-80 p-4">
                     {/* Sidebar content here */}
-                    <li><Link href="/" className="font-bold">Login</Link></li>
+                    <li><Link href="/login" className="font-bold">Login</Link></li>
+                    <li><Link href="/register" className="font-bold">Register</Link></li>
                     <li><Link href="/lfg" className="font-bold">LFG</Link></li>
                     <li><Link href="/info" className="font-bold">Info</Link></li>
                     <li><Link href="/support" className="font-bold">Support</Link></li>
