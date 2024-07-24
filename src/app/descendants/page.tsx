@@ -88,12 +88,11 @@ function Popup({ descendant, onClose }: { descendant: DescendantInfo, onClose: (
                 <Image
                     src={descendant.descendant_image_url}
                     alt={descendant.descendant_name}
-                    width={100}
-                    height={100}
+                    width={150}
+                    height={150}
                 />
 
                 <div className="mt-4">
-                    <h3 className="text-lg font-bold">{descendant.descendant_name}s Stats</h3>
                     {currentStats.length > 0 ? (
                         currentStats.map((stat, index) => (
                             <div key={index} className="align-text-center">

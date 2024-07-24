@@ -11,8 +11,7 @@ const DescendantButton: React.FC<DescendantButtonProps> = ({ descendant, onClick
         <button
             onClick={() => onClick(descendant)}
             type="button"
-            className="border flex flex-col items-center justify-center p-5"
-            style={{ width: '150px', height: '150px' }}
+            className="flex flex-col items-center justify-center p-5"
         >
             <Image
                 src={descendant.descendant_image_url}

@@ -18,11 +18,12 @@ export default function ContentMenu() {
                     <li><Link href="/info" className="font-bold">Info</Link></li>
                     <li><Link href="/support" className="font-bold">Support</Link></li>
                     <div className="divider divider-neutral"></div>
-                    <li><Link href="/patchnotes" className="font-boldmt-3">Patch Notes</Link></li>
+                    <li><Link href="/news" className="font-boldmt-3">News</Link></li>
                     <li><Link href="/descendants" className="font-bold mt-3">Descendants</Link></li>
                     <li><Link href="/weapons" className="font-bold mt-3">Weapons</Link></li>
-                    <li><Link href="/ematerials" className="font-bold mt-3">Enhancement Materials</Link></li>
                     <li><Link href="/modules" className="font-bold mt-3">Modules</Link></li>
+                    <li><Link href="/reactor" className="font-bold mt-3">Reactors</Link></li>
+                    <li><Link href="/ematerials" className="font-bold mt-3">Enhancement Materials</Link></li>
                     <li><Link href="/ecomponents" className="font-bold mt-3">External Components</Link></li>
                     <li><Link href="/cmaterials" className="font-bold mt-3">Core Material</Link></li>
                     <li><Link href="/bmaterials" className="font-bold mt-3">Basic Materials</Link></li>
