@@ -1,6 +1,7 @@
 import ContentMenu from "@/components/ContentMenu"
 import Link from "next/link"
 import Image from "next/image"
+import InfoCard from "@/components/InfoCard"
 
 export default function page() {
     return (
@@ -19,6 +20,9 @@ export default function page() {
             </div>
             <div className="absolute top-0 left-0 ml-3 mt-3">
                 <ContentMenu />
+            </div>
+            <div>
+                <InfoCard />
             </div>
         </main>
     )

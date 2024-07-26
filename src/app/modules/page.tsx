@@ -69,6 +69,7 @@ export default function Page() {
 }
 
 function ModuleButton({ module, onClick }: { module: moduleInfo, onClick: (module: moduleInfo) => void }) {
+    
     return (
         <button
             onClick={() => onClick(module)}
