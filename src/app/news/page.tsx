@@ -70,13 +70,13 @@ const NewsPage = async () => {
       <div className="absolute top-0 left-0 ml-3 mt-3">
         <ContentMenu />
       </div>
-      <div className='border w-1/2 h-1/2 overflow-auto p-12'>
+      <div className='border flex flex-grid  w-1/2 h-1/2 overflow-auto p-12'>
         <div className=''>
           <ul>
             {newsItems.map((item, index) => (
               <li key={index}>
                 {item.images.length > 0 && (
-                  <div>
+                  <div className='mb-4 overflow-auto overflow-y-hidden'>
                     {item.images.map((imgUrl, imgIndex) => (
                       <a key={imgIndex} href={item.link} target="_blank" rel="noopener noreferrer">
                         <button style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>

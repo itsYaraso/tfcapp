@@ -1,7 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
+import { lfgGroup, groupsettings } from "@/types/lfgtypes"
 
-export default function GroupCard() {
+export default function GroupCard ({getgroup} : {getgroup : lfgGroup}) {
+    
     return (
         <div className="rounded-box h-96">
             <div className="w-full">
@@ -11,10 +13,12 @@ export default function GroupCard() {
                         width: '1200px',
                         height: '200px'
                     }}>
-                    <p className="border justify-end flex">LFG group</p>
+                    <p className="border justify-end flex">{getgroup.selectedactivity}</p>
+                    <p className="border justify-end flex">{getgroup.currplayercount}</p>
+                    <p className="border justify-end flex">{getgroup.maxplayercount}</p>
+                    <p className="border justify-end flex">{getgroup.currdescendant}</p>
                 </button>
             </div>
         </div>
-
     )
 }
