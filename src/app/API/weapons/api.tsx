@@ -9,17 +9,17 @@ export type weaponInfo = {
     stat_detail: Array<stat_detail>
 }
 
-type base_stat = {
+export type base_stat = {
     stat_id: string
     stat_value: number
 }
 
-type stat_detail = {
+export type stat_detail = {
     level: number
     firearm: Array<firearm>
 }
 
-type firearm = {
+export type firearm = {
     fire_atk_type: string
     fire_atk_value: number
 }

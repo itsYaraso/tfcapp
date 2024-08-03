@@ -8,7 +8,7 @@ import { getWeapons, weaponInfo } from "../API/weapons/api"
 export default function Page() {
 
     const [weapons, setweapons] = useState<weaponInfo[]>([])
-    const [selectedweapon, setSelectedWeapons] = useState<weaponInfo | null>(null)
+    const [selectedweapon, setSelectedWeapon] = useState<weaponInfo | null>(null)
     const [isPopupVisible, setPopupVisible] = useState(false)
 
     useEffect(() => {
@@ -24,12 +24,12 @@ export default function Page() {
     }, [])
 
     const showPopup = (weapon: weaponInfo) => {
-        setSelectedWeapons(weapon)
+        setSelectedWeapon(weapon)
         setPopupVisible(true)
     }
 
     const closePopup = () => {
-        setSelectedWeapons(null)
+        setSelectedWeapon(null)
         setPopupVisible(false)
     }
 

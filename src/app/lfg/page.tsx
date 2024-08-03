@@ -126,5 +126,3 @@ const GroupCreator: React.FC<GroupCreatorProps> = ({ creategroupclose }) => {
         </div>
     )
 }
-
-export default Page
