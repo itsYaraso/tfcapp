@@ -1,3 +1,5 @@
+import { requiredkey } from "@/types/globaltypes";
+
 export type weaponInfo = {
     weapon_name: string
     weapon_id: string
@@ -25,7 +27,7 @@ export type firearm = {
 }
 
 export async function getWeapons(): Promise<weaponInfo[]> {
-    const API_KEY = "test_af2c8cd311b142ddbd0fcfddbbc4ffb85265dd258f57181f7ced2adb6edb1fe6efe8d04e6d233bd35cf2fabdeb93fb0d"
+    const API_KEY = requiredkey
     const urlString = "https://open.api.nexon.com/static/tfd/meta/en/weapon.json"
     const response = await fetch(urlString, {
         method: 'GET',

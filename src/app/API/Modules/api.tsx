@@ -1,3 +1,6 @@
+import { requiredkey } from "@/types/globaltypes";
+
+
 export type module_stat = {
     level: number;
     module_capacity: number;
@@ -19,7 +22,7 @@ export async function getModules(): Promise<moduleInfo[]> {
 
     
 
-    const API_KEY = `{requiredkey.reqkey}`;
+    const API_KEY = requiredkey
     const urlString = "https://open.api.nexon.com/static/tfd/meta/en/module.json";
 
     const response = await fetch(urlString, {
