@@ -30,6 +30,8 @@ async function fetchSteamNews(): Promise<NewsItem[]> {
   const response = await fetch('https://store.steampowered.com/feeds/news/app/2074920/?cc=US&l=english&snr=1_2108_9__2107');
   const xmlData = await response.text();
 
+
+
   let newsItems: NewsItem[] = [];
 
   await xml2js.parseStringPromise(xmlData).then((result) => {
@@ -70,12 +72,15 @@ const NewsPage = async () => {
       <div className="absolute top-0 left-0 ml-3 mt-3">
         <ContentMenu />
       </div>
-      <div className='border flex flex-grid  w-1/2 h-1/2 overflow-auto p-12'>
+      <div className='border flex flex-grid  w-1/2 h-1/2 overflow-auto p-4'>
         <div className=''>
           <ul>
             {newsItems.map((item, index) => (
               <li key={index}>
-                {item.images.length > 0 && (
+
+
+                {item.images.length > 0 ? (
+
                   <div className='mb-4 overflow-auto overflow-y-hidden'>
                     {item.images.map((imgUrl, imgIndex) => (
                       <a key={imgIndex} href={item.link} target="_blank" rel="noopener noreferrer">
@@ -85,7 +90,22 @@ const NewsPage = async () => {
                       </a>
                     ))}
                   </div>
-                )}
+                ) : (
+                  <div className='border p-4 mb-4'>
+                    <a href={item.link} target="_blank" rel="noopener noreferrer">
+
+                    <button style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
+                      <p>{item.title}</p>
+                      
+                    </button>
+                    </a>
+                  </div>
+                )
+                }
+
+
+
+
               </li>
             ))}
           </ul>
@@ -97,3 +117,4 @@ const NewsPage = async () => {
 };
 
 export default NewsPage;
+

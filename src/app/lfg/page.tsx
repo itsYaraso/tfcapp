@@ -87,9 +87,9 @@ const GroupCreator: React.FC<GroupCreatorProps> = ({ creategroupclose }) => {
                 <button onClick={creategroupclose} className="absolute top-2 right-2 p-2  text-white rounded-full">X</button>
                 <div className="">
                     <h2 className="text-2xl font-bold">Create Team</h2>
-                    <div>
+
                         <ActivityList />
-                    </div>
+
                     <div className="border mt-10 rounded-xl  flex flex-col items-center justify-center p-5 relative" style={{ width: '90vw', height: '70vh' }}>
                         <div>
                             <h6 className="">Team Title</h6>
