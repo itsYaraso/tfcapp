@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react"
 import ContentMenu from "@/components/ContentMenu"
-import ActivityList from "@/components/ActivityList"
+import { ActivityList } from "@/components/ActivityList"
 import Link from "next/link"
 import Image from "next/image"
 import GroupCard from "@/components/GroupCard"
@@ -34,37 +34,24 @@ const Page: React.FC = () => {
             <div className="absolute top-0 left-0 ml-3 mt-3">
                 <ContentMenu />
             </div>
-            <ActivityList />
 
 
             <div className="border p-4 min-h-96 min-w-full grid grid-cols-5 grid-flow-row">
-                <div className="grid grid-rows border">
+                <div className="grid grid-rows">
                     <p className="mr-4 ">Activity</p>
-                    <div className="border">
-                    </div>
-
                 </div>
-                <div className="grid grid-rows border">
+                <div className="grid grid-rows">
                     <p className="mr-4">Members</p>
-                    <div className="border">
-
-                    </div>
                 </div>
-                <div className="grid grid-rows border">
+                <div className="grid grid-rows">
                     <p className="mr-4">Location</p>
-                    <div className="border">
-                        
-                    </div>
                 </div>
-                <div className="grid grid-rows border">
+                <div className="grid grid-rows">
                     <p className="mr-4">Time</p>
-                    
-                    <div className="border">
-                    </div>
                 </div>
-                <div className="mt-4">
+                <div className="ml-12">
                     <button onClick={creategroup}
-                        className="border p-4 btn-wide hover:bg-zinc-950 hover:text-zinc-500">
+                        className="border rounded-lg p-4 btn-wide hover:bg-zinc-950 hover:text-zinc-500">
                         Create Team
                     </button>
                 </div>
