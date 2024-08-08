@@ -1,4 +1,4 @@
-export type lfgGroup = {
+export type lfgchoices = {
     groupid: string,
     groupname: string,
     selectedactivity: string,

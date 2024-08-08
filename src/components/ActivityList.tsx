@@ -1,4 +1,14 @@
 import { Dropdown, DropdownItem } from "flowbite-react";
+import { lfgchoices } from "@/types/lfgtypes";
+
+
+let selectedactivityAL
+
+function selectedactivity(selectedactivity: lfgchoices["selectedactivity"]) {
+
+    selectedactivityAL = selectedactivity
+
+}
 
 export function ActivityList() {
     return (
@@ -11,11 +21,13 @@ export function ActivityList() {
                         <DropdownItem>Mission 3</DropdownItem>
                         <DropdownItem>Mission 4</DropdownItem>
                     </Dropdown>
+
+
                     <Dropdown className="bg-black" label="Vespers" size="lg" placement="bottom">
-                        <DropdownItem>Mission 1</DropdownItem>
-                        <DropdownItem>Mission 2</DropdownItem>
-                        <DropdownItem>Mission 3</DropdownItem>
-                        <DropdownItem>Mission 4</DropdownItem>
+                        <DropdownItem onClick={() => selectedactivity("Vespers - mission 1")}>Mission 1</DropdownItem>                            
+                        <DropdownItem onClick={() => selectedactivity("Vespers - mission 2")}>Mission 2</DropdownItem>
+                        <DropdownItem onClick={() => selectedactivity("Vespers - mission 3")}>Mission 3</DropdownItem>
+                        <DropdownItem onClick={() => selectedactivity("Vespers - mission 4")}>Mission 4</DropdownItem>
                     </Dropdown>
                     <Dropdown className="bg-black" label="Echo Swamp" size="lg" placement="bottom">
                         <DropdownItem>Mission 1</DropdownItem>
