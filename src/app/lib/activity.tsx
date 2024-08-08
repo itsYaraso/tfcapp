@@ -16,4 +16,4 @@ export default class GroupSettings {
     }
 }
 
-let groupSettings = new GroupSettings("");
+let groupSettings = new GroupSettings("", "", 0, "", false);

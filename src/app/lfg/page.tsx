@@ -20,7 +20,6 @@ function groupOptions(choices: GroupSettings) {
     choices.platformchoice = selectedPlatform;
     choices.micrequired = selectedMic;
     
-
 }
 
 const Page: React.FC = () => {
@@ -48,10 +47,10 @@ const Page: React.FC = () => {
                     />
                 </Link>
             </div>
+
             <div className="absolute top-0 left-0 ml-3 mt-3">
                 <ContentMenu />
             </div>
-
 
             <div className="border p-4 min-h-96 min-w-full grid grid-cols-5 grid-flow-row">
                 <div className="grid grid-rows">
