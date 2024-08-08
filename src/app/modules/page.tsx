@@ -47,7 +47,7 @@ export default function Page() {
                     />
                 </Link>
             </div>
-            <div className="mb-2 mt-24 border-2 grid grid-cols-7 gap-4 justify-items-center no-scrollbar overflow-y-auto w-[62vw] h-[0vh]">
+            <div className="flex flex-wrap mb-2 mt-24 border-2 grid grid-cols-7 gap-4 justify-items-center no-scrollbar overflow-y-auto w-[62vw] h-[0vh]">
             </div>
             <div className="p-10 grid grid-cols-6 gap-4 justify-items-center no-scrollbar overflow-y-auto h-[100vh] w-[68vw]">
                 {modules.map(module => (

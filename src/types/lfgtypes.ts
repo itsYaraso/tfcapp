@@ -1,6 +1,6 @@
-export type lfgchoices = {
+export type LfgChoices = {
     groupid: string,
-    groupname: string,
+    chosenGroupName: string,
     selectedactivity: string,
     currplayercount: number,
     maxplayercount: number,
@@ -9,7 +9,7 @@ export type lfgchoices = {
     micrequired: boolean
 }
 
-export type groupsettings = {
+export type GroupSettings = {
     groupname: string,
     activitychoice: string,
     neededplayers: number,
